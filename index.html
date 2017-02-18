@@ -1,17 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="App">
 <head>
 	<title>Ryne Schillinger</title>
 	<!--  Scripts -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script src="https://unpkg.com/isotope-layout@3.0/dist/isotope.pkgd.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/backtop.js"></script>
 	<script src="js/filter.js"></script>
 	<!--  Styles -->
 	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
 	<script src="https://use.fontawesome.com/0b8790a92d.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
-<body>
+<body ng-controller="AppController">
 
 	<div class="container">
 		<nav>
@@ -32,6 +35,12 @@
 			</h3>
 		</div>
 	</section>
+
+	<!--  Back to top button -->
+	<a href="#0" class="cd-top">
+		<i class="fa fa-arrow-up" aria-hidden="true"></i>
+		<p>TOP</p>
+	</a>
 
 	<div class="container">
 		<section id="work-gallery">
@@ -62,213 +71,17 @@
 
 			<div class="grid">
 			  <div class="grid-sizer"></div>
-
-	  	  <!--  GRCC  -->
-	      <a href="#">
-	    	  <div class="grid-item grid-item-2x brand print" id="tile-grcc" data-category="brand print">
-	    	  	<div class="grid-item-overlay">
-	    	  	  <div class="grid-item-text">
-	    	  	  	<h3 class="txt-white">Green River Community College</h3>
-	    	  	  	<p class="txt-red">Identity Design</p>
-	    	  	  </div>
-	    	  	</div>
-	    	  </div>
-	    	</a>
-
-			  <!--  Netflix  -->
-			  <a href="#">
-				  <div class="grid-item print" id="tile-netflix" data-category="print">
-				  	<div class="grid-item-overlay">
-				  	  <div class="grid-item-text">
-				  	  	<h3 class="txt-white">Netflix</h3>
-				  	  	<p class="txt-red">Holiday Campaign</p>
-				  	  </div>
-				  	</div>
-				  </div>
-				</a>
-
-			  <!--  AWB  -->
-			  <a href="#">
-				  <div class="grid-item ui" id="tile-awb" data-category="ui">
-				  	<div class="grid-item-overlay">
-				  	  <div class="grid-item-text">
-				  	  	<h3 class="txt-white">AmericanWestBank</h3>
-				  	  	<p class="txt-red">Website</p>
-				  	  </div>
-				  	</div>
-				  </div>
-				</a>
-
-			  <!--  Hoopfest  -->
-			  <a href="#">
-				  <div class="grid-item brand ui" id="tile-hoopfest" data-category="brand ui">
-				  	<div class="grid-item-overlay">
-				  	  <div class="grid-item-text">
-				  	  	<h3 class="txt-white">Hoopfest</h3>
-				  	  	<p class="txt-red">Social Media Contest</p>
-				  	  </div>
-				  	</div>
-				  </div>
-				</a>
-
-			  <!--  H-Source  -->
-			  <a href="#">
-				  <div class="grid-item brand" id="tile-hsource" data-category="brand">
-				  	<div class="grid-item-overlay">
-				  	  <div class="grid-item-text">
-				  	  	<h3 class="txt-white">H-Source</h3>
-				  	  	<p class="txt-red">Identity Design</p>
-				  	  </div>
-				  	</div>
-				  </div>
-				</a>
-
-			  <!--  Phraselist  -->
-			  <a href="#">
-				  <div class="grid-item ui dev" id="tile-phraselist" data-category="ui dev">
-				  	<div class="grid-item-overlay">
-				  	  <div class="grid-item-text">
-				  	  	<h3 class="txt-white">Phraselist</h3>
-				  	  	<p class="txt-red">Web App</p>
-				  	  </div>
-				  	</div>
-				  </div>
-				</a>
-
-			  <!--  Engage  -->
-			  <a href="#">
-				  <div class="grid-item brand print" id="tile-engage" data-category="brand print">
-				  	<div class="grid-item-overlay">
-				  	  <div class="grid-item-text">
-				  	  	<h3 class="txt-white">Engage</h3>
-				  	  	<p class="txt-red">Identity Design</p>
-				  	  </div>
-				  	</div>
-				  </div>
-				</a>
-
-			  <!--  Spitfyre  -->
-			  <a href="#">
-				  <div class="grid-item dev ui" id="tile-spitfyre" data-category="dev ui">
-				  	<div class="grid-item-overlay">
-				  	  <div class="grid-item-text">
-				  	  	<h3 class="txt-white">Spitfyre</h3>
-				  	  	<p class="txt-red">Web App</p>
-				  	  </div>
-				  	</div>
-				  </div>
-				</a>
-
-			  <!--  Mae Medicine  -->
-			  <a href="#">
-				  <div class="grid-item brand print" id="tile-mae" data-category="brand print">
-				  	<div class="grid-item-overlay">
-				  	  <div class="grid-item-text">
-				  	  	<h3 class="txt-white">Mae Integrative Medicine</h3>
-				  	  	<p class="txt-red">Identity Design</p>
-				  	  </div>
-				  	</div>
-				  </div>
-				</a>
-
-			  <!--  Logos  -->
-			  <a href="#">
-				  <div class="grid-item brand" id="tile-logos" data-category="brand">
-				  	<div class="grid-item-overlay">
-				  	  <div class="grid-item-text">
-				  	  	<h3 class="txt-white">Various Logos</h3>
-				  	  </div>
-				  	</div>
-				  </div>
-				</a>
-
-			  <!--  MEAN Coach  -->
-			  <a href="#">
-				  <div class="grid-item grid-item-2x ui dev" id="tile-mean" data-category="ui dev">
-				  	<div class="grid-item-overlay">
-				  	  <div class="grid-item-text">
-				  	  	<h3 class="txt-white">M.E.A.N. Coach</h3>
-				  	  	<p class="txt-red">Web App</p>
-				  	  </div>
-				  	</div>
-				  </div>
-				</a>
-
-			  <!--  SpIFF  -->
-			  <a href="#">
-				  <div class="grid-item print" id="tile-spiff" data-category="print">
-				  	<div class="grid-item-overlay">
-				  	  <div class="grid-item-text">
-				  	  	<h3 class="txt-white">Spokane International Film Festival</h3>
-				  	  	<p class="txt-red">Poster Design</p>
-				  	  </div>
-				  	</div>
-				  </div>
-				</a>
-
-			  <!--  BHW1  -->
-			  <a href="#">
-				  <div class="grid-item print" id="tile-bhw1" data-category="print">
-				  	<div class="grid-item-overlay">
-				  	  <div class="grid-item-text">
-				  	  	<h3 class="txt-white">BHW1</h3>
-				  	  	<p class="txt-red">Gift Design</p>
-				  	  </div>
-				  	</div>
-				  </div>
-				</a>
-
-			  <!--  Amtrak Photos  -->
-			  <a href="#">
-				  <div class="grid-item print" id="tile-amtrak" data-category="print">
-				  	<div class="grid-item-overlay">
-				  	  <div class="grid-item-text">
-				  	  	<h3 class="txt-white">Amtrak Cascades</h3>
-				  	  	<p class="txt-red">Photo Editing</p>
-				  	  </div>
-				  	</div>
-				  </div>
-				</a>
-
-			  <!--  Pickwick  -->
-			  <a href="#">
-				  <div class="grid-item print" id="tile-pickwick" data-category="print">
-				  	<div class="grid-item-overlay">
-				  	  <div class="grid-item-text">
-				  	  	<h3 class="txt-white">Pickwick</h3>
-				  	  	<p class="txt-red">Poster Design</p>
-				  	  </div>
-				  	</div>
-				  </div>
-				</a>
-
-			  <!--  Spokane Public Market  -->
-			  <a href="#">
-				  <div class="grid-item brand print" id="tile-spm" data-category="brand print">
-				  	<div class="grid-item-overlay">
-				  	  <div class="grid-item-text">
-				  	  	<h3 class="txt-white">Spokane Public Market</h3>
-				  	  	<p class="txt-red">Branding</p>
-				  	  </div>
-				  	</div>
-				  </div>
-				</a>
-
-			  <!--  Plenty of Cats  -->
-			  <a href="#">
-				  <div class="grid-item ui dev" id="tile-poc" data-category="ui dev">
-				  	<div class="grid-item-overlay">
-				  	  <div class="grid-item-text">
-				  	  	<h3 class="txt-white">PlentyOfCats</h3>
-				  	  	<p class="txt-red">Web App</p>
-				  	  </div>
-				  	</div>
-				  </div>
-				</a>
-
-
+		    <a href="#" ng-repeat="project in projects track by $index">
+		  	  <div class="{{project.tileSize}} {{project.tags}}" data-category="{{project.tags}}" style="background: url({{project.tileThumb}}); background-size: 100%;">
+		  	  	<div class="grid-item-overlay">
+		  	  	  <div class="grid-item-text">
+		  	  	  	<h3 class="txt-white">{{project.title}}</h3>
+		  	  	  	<p class="txt-red">{{project.label}}</p>
+		  	  	  </div>
+		  	  	</div>
+		  	  </div>
+		  	</a>
 			</div>
-
 
 		</section>
 	</div>

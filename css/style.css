@@ -59,6 +59,51 @@ label {
 }
 
 
+/* Back to Top Button*/
+
+.cd-top {
+	position: fixed;
+	right: 1.75%; bottom: 0;
+	flex-direction: column;
+	align-items: center;
+	padding: 12px 14px 6px 14px;
+	border-radius: 3em 3em 0 0;
+	background-color: #2B3B4F;
+	z-index: 99;
+	display: flex;
+	opacity: 0;
+	cursor: pointer;
+}
+
+.cd-top i, .cd-top p {
+	font-size: 13px;
+	font-weight: 700;
+	letter-spacing: .05em;
+	color: #c1d4d7;
+	margin: 0;
+	transition-property: color;
+	transition-duration: 300ms;
+}
+
+.cd-top:hover > i, .cd-top:hover > p {
+	color: white;
+} 
+
+.cd-top.cd-is-visible {
+  visibility: visible;
+  opacity: 1;
+}
+.cd-top.cd-fade-out {
+  opacity: .4;
+  transition-property: opacity;
+  transition-duration: 300ms;
+}
+
+.cd-top.cd-fade-out:hover {
+  opacity: 1;
+}
+
+
 /* Buttons */
 
 button {
@@ -303,7 +348,7 @@ section#work-gallery {
 	width: 101%;
 	opacity: 0;
 	transition: 300ms ease;
-	background-color: #16365f;
+	background-color: #0e3669;
 }
 
 .grid-item-text {
@@ -335,78 +380,6 @@ section#work-gallery {
 .grid-item:hover .grid-item-text {
 	top: 50%;
 }
-
-/* Tile Links */
-
-#tile-grcc {
-	background: url(../img/tile_grcc.jpg); background-size: 100%;
-}
-
-#tile-netflix {
-	background: url(../img/tile_netflix.jpg); background-size: 100%;
-}
-
-#tile-awb {
-	background: url(../img/tile_awb.jpg); background-size: 100%;
-}
-
-#tile-hoopfest {
-	background: url(../img/tile_hoopfest.jpg); background-size: 100%;
-}
-
-#tile-hsource {
-	background: url(../img/tile_h-source.jpg); background-size: 100%;
-}
-
-#tile-phraselist {
-	background: url(../img/tile_phraselist.jpg); background-size: 100%;
-}
-
-#tile-engage {
-	background: url(../img/tile_engage.jpg); background-size: 100%;
-}
-
-#tile-spitfyre {
-	background: url(../img/tile_spitfyre.jpg); background-size: 100%;
-}
-
-#tile-spiff {
-	background: url(../img/tile_spiff.jpg); background-size: 100%;
-}
-
-#tile-mae {
-	background: url(../img/tile_mae.jpg); background-size: 100%;
-}
-
-#tile-logos {
-	background: url(../img/tile_logo.jpg); background-size: 100%;
-}
-
-#tile-mean {
-	background: url(../img/tile_mean.jpg); background-size: 100%;
-}
-
-#tile-pickwick {
-	background: url(../img/tile_pickwick.jpg); background-size: 100%;
-}
-
-#tile-amtrak {
-	background: url(../img/tile_amtrak.jpg); background-size: 100%;
-}
-
-#tile-bhw1 {
-	background: url(../img/tile_bhw1.jpg); background-size: 100%;
-}
-
-#tile-spm {
-	background: url(../img/tile_spm.jpg); background-size: 100%;
-}
-
-#tile-poc {
-	background: url(../img/tile_poc.jpg); background-size: 100%;
-}
-
-
 
 
 
