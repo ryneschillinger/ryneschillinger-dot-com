@@ -1,0 +1,418 @@
+/*** GLOBAL STYLES ***/
+
+body {
+	background-color: #EEF4F5;
+	font-family: 'Poppins', sans-serif;
+	color: #2B3B4F;
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	font-size: 40px;
+	font-weight: 300;
+}
+
+h2 {
+	font-size: 32px;
+}
+
+h3 {
+	font-size: 20px;
+	line-height: 1.4;
+}
+
+h4 {
+	font-size: 12px;
+}
+
+p {
+	font-size: 15px;
+}
+
+a {
+	color: #FD4F3F;
+	text-decoration: none;
+	transition-property: color;
+	transition-duration: 300ms;
+	cursor: pointer;
+}
+
+a:hover {
+	color: #e2281b;
+}
+
+label {
+	font-size: 14px;
+	font-weight: 500;
+}
+
+
+/* Layout & Containers */
+
+.container {
+	margin: 0 auto;
+	max-width: 1200px;
+	width: 90%;
+}
+
+
+/* Buttons */
+
+button {
+	font-family: 'Poppins', sans-serif;
+	font-size: 14px;
+	font-weight: 500;
+	color: white;
+	border-radius: 3em;
+	padding: 7px 15px 6px 15px;
+	border: none;
+	cursor: pointer;
+	outline: none;
+	transition-property: background-color;
+	transition-duration: 300ms;
+}
+
+.btn-red {
+	background-color: #FD4F3F;
+}
+
+.btn-red:hover {
+	background-color: #ef382b;
+}
+
+.btn-green {
+	background-color: #24d3a8;
+}
+
+.btn-green:hover {
+	background-color: #0cc698;
+}
+
+.btn-yellow {
+	background-color: #ffb82f;
+}
+
+.btn-yellow:hover {
+	background-color: #ffa802;
+}
+
+.btn-blue{
+	background-color: #48c8f7;
+}
+
+.btn-blue:hover {
+	background-color: #28bbf1;
+}
+
+.btn-purple{
+	background-color: #b376fa;
+}
+
+.btn-purple:hover {
+	background-color: #a765f5;
+}
+
+.btn-secondary {
+	background-color: #d6e6e9;
+	color: #2B3B4F;
+}
+
+.btn-secondary:hover {
+	background-color: #c8dadd;
+}
+
+
+/* Font colors */
+
+.txt-blue {
+	color: #2B3B4F;
+}
+
+.txt-red {
+	color: #FD4F3F;
+}
+
+.txt-white {
+	color: white;
+}
+
+
+/* Background colors */
+
+.bkg-white {
+	background-color: #EEF4F5;
+}
+
+.bkg-lightgray {
+	background-color: #E3EDEF;
+}
+
+
+/*** NAVIGATION BAR ***/
+
+nav {
+	display: flex;
+	align-items: center;
+	z-index: 1;
+	position: absolute;
+	top: 10px;
+}
+
+nav #nav-logo {
+	height: 60px;
+}
+
+nav #nav-links {
+	margin-bottom: 10px;
+}
+
+nav #nav-links a {
+	color: #2B3B4F;
+	font-size: 14px;
+	font-weight: 500;
+	margin-left: 32px;
+}
+
+nav #nav-links a:hover {
+	color: #FD4F3F;
+}
+
+
+/*** HOMEPAGE STYLES ***/
+
+/* Hero Section */
+
+section#hero-text {
+	background-color: #E3EDEF;
+	margin-top: -10px;
+}
+
+section#hero-text .container {
+	padding-top: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 66vh;
+}
+
+section#hero-text h3 {
+	width: 69%;
+	font-weight: 300;
+	text-align: center;
+}
+
+
+/* WORK TILES */
+
+section#work-gallery {
+	padding: 60px 0;
+}
+
+* { box-sizing: border-box; }
+
+/* Filter Buttons */
+
+.filters-button-group {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 30px;
+}
+
+.filters-button-group label {
+	margin-top: 2px;
+}
+
+.filters-button-group button {
+	margin-left: 13px;
+}
+
+.filter-icon {
+	height: 18px;
+	width: 18px;
+	margin: 2px 5px 0 0;
+	float: left;
+}
+
+.filter-icon-all {
+	background: url(../img/filter_all.svg) no-repeat;
+	margin-right: 3px;
+}
+
+.filter-icon-brand {
+	background: url(../img/filter_brand.svg) no-repeat;
+}
+
+.filter-icon-print {
+	background: url(../img/filter_print.svg) no-repeat;
+}
+
+.filter-icon-ui {
+	background: url(../img/filter_ui.svg) no-repeat;
+	margin-right: 2px;
+}
+
+.filter-icon-code {
+	background: url(../img/filter_code.svg) no-repeat;
+}
+
+/* clear fix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* 4 columns, percentage width */
+.grid-item,
+.grid-sizer {
+  width: 25%;
+}
+
+.grid-item {
+  position: relative;
+  float: left;
+  cursor: pointer;
+  background: #0D8;
+  overflow: hidden;
+}
+
+.grid-item:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+
+.grid-item-2x {
+	width: 50%;
+}
+
+.grid-item-2x:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+
+.grid-item-overlay {
+	position: absolute;
+	top: 0; left: 0;
+	height: 100%;
+	width: 101%;
+	opacity: 0;
+	transition: 300ms ease;
+	background-color: #16365f;
+}
+
+.grid-item-text {
+  position: absolute;
+  text-align: center;
+  width: 85%;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transition-property: top;
+  transition-duration: 400ms;
+}
+
+.grid-item-text h3 {
+	font-weight: 300;
+	line-height: 1;
+}
+
+.grid-item-text p {
+	font-weight: 400;
+	margin-top: -10px;
+}
+
+.grid-item:hover > .grid-item-overlay {
+	opacity: .95;
+}
+
+.grid-item:hover .grid-item-text {
+	top: 50%;
+}
+
+/* Tile Links */
+
+#tile-grcc {
+	background: url(../img/tile_grcc.jpg); background-size: 100%;
+}
+
+#tile-netflix {
+	background: url(../img/tile_netflix.jpg); background-size: 100%;
+}
+
+#tile-awb {
+	background: url(../img/tile_awb.jpg); background-size: 100%;
+}
+
+#tile-hoopfest {
+	background: url(../img/tile_hoopfest.jpg); background-size: 100%;
+}
+
+#tile-hsource {
+	background: url(../img/tile_h-source.jpg); background-size: 100%;
+}
+
+#tile-phraselist {
+	background: url(../img/tile_phraselist.jpg); background-size: 100%;
+}
+
+#tile-engage {
+	background: url(../img/tile_engage.jpg); background-size: 100%;
+}
+
+#tile-spitfyre {
+	background: url(../img/tile_spitfyre.jpg); background-size: 100%;
+}
+
+#tile-spiff {
+	background: url(../img/tile_spiff.jpg); background-size: 100%;
+}
+
+#tile-mae {
+	background: url(../img/tile_mae.jpg); background-size: 100%;
+}
+
+#tile-logos {
+	background: url(../img/tile_logo.jpg); background-size: 100%;
+}
+
+#tile-mean {
+	background: url(../img/tile_mean.jpg); background-size: 100%;
+}
+
+#tile-pickwick {
+	background: url(../img/tile_pickwick.jpg); background-size: 100%;
+}
+
+#tile-amtrak {
+	background: url(../img/tile_amtrak.jpg); background-size: 100%;
+}
+
+#tile-bhw1 {
+	background: url(../img/tile_bhw1.jpg); background-size: 100%;
+}
+
+#tile-spm {
+	background: url(../img/tile_spm.jpg); background-size: 100%;
+}
+
+#tile-poc {
+	background: url(../img/tile_poc.jpg); background-size: 100%;
+}
+
+
+
+
+
+/* MEDIA QUERIES s*/
+
+@media all and (max-width: 600px) {
+
+
+}
