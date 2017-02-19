@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html ng-app="App">
+<html lang="en" ng-app="App">
 <head>
+	<meta charset="UTF-8">
 	<title>Ryne Schillinger</title>
 	<!--  Scripts -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.min.js"></script>
@@ -9,6 +10,7 @@
 	<script src="js/app.js"></script>
 	<script src="js/backtop.js"></script>
 	<script src="js/filter.js"></script>
+	<script src="js/general.js"></script>
 	<!--  Styles -->
 	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
 	<script src="https://use.fontawesome.com/0b8790a92d.js"></script>
@@ -20,10 +22,10 @@
 		<nav>
 			<a href="#"><img src="img/rs_avy.svg" id="nav-logo" alt="ryne logo"></a>
 			<div id="nav-links">
-				<a href="index.html">Work</a>
-				<a href="info.html">Info</a>
-				<a href="resume/RyneSchillinger_Resume.pdf">Resume</a>
-				<a href="#">Contact</a>
+				<a class="work-link">Work</a>
+				<a class="about-link">About</a>
+				<a href="resume/RyneSchillinger_Resume.pdf" target="_blank">Resume</a>
+				<a class="contact-link">Contact</a>
 			</div>
 		</nav>
 	</div>
@@ -31,7 +33,7 @@
 	<section id="hero-text">
 		<div class="container">
 			<h3 class="txt-blue">
-				I’m Ryne. Like “rhinoceros” without the “oceros.” I'm a designer and full-stack developer with a penchant for clean, succint visual solutions. Take a look at my work. And if you’d like a solution of your own, <a href="#">hit me up.</a>
+				I’m Ryne. Like “rhinoceros” without the “oceros.” I'm a designer and full-stack developer with a penchant for clean, succint visual solutions. Take a look at my work. And if you’d like a solution of your own, <a class="contact-link" href="#contact">hit me up.</a>
 			</h3>
 		</div>
 	</section>
@@ -43,30 +45,36 @@
 	</a>
 
 	<div class="container">
-		<section id="work-gallery">
+		<section class="section-padding" id="work-gallery">
 
 			<div class="button-group filters-button-group">
-				<label>Show me:</label>
-			  <button class="btn-red" data-filter="*">
-		  		<span class="filter-icon filter-icon-all"></span>
-		  		Everything
-			  </button>
-			  <button class="btn-blue btn-secondary" data-filter=".brand">
-			  	<span class="filter-icon filter-icon-brand"></span>
-			  	Branding
-			  </button>
-			  <button class="btn-yellow btn-secondary" data-filter=".print">
-			  	<span class="filter-icon filter-icon-print"></span>
-			  	Print Design
-			  </button>
-			  <button class="btn-green btn-secondary" data-filter=".ui">
-			  	<span class="filter-icon filter-icon-ui"></span>
-			  	UI Design
-			  </button>
-			  <button class="btn-purple btn-secondary" data-filter=".dev">
-			  	<span class="filter-icon filter-icon-code"></span>
-			  	Development
-			  </button>
+				<div class="header-spacer" id="filters-header">
+					<label>Show me: <span id="filters-show-me">Everything</span></label>
+					<i class="fa fa-chevron-down filters-hidden" aria-hidden="true" id="filters-show-hide"></i>
+				</div>
+				<hr>
+				<div id="filters-buttons">
+				  <button class="filters-button btn-red" data-filter="*">
+			  		<span class="filter-icon filter-icon-all"></span>
+			  		Everything
+				  </button>
+				  <button class="filters-button btn-blue btn-secondary filter-btn-middle" data-filter=".brand">
+				  	<span class="filter-icon filter-icon-brand"></span>
+				  	Branding
+				  </button>
+				  <button class="filters-button btn-yellow btn-secondary" data-filter=".print">
+				  	<span class="filter-icon filter-icon-print"></span>
+				  	Print Design
+				  </button>
+				  <button class="filters-button btn-green btn-secondary filter-btn-middle" data-filter=".ui">
+				  	<span class="filter-icon filter-icon-ui"></span>
+				  	UI Design
+				  </button>
+				  <button class="filters-button btn-purple btn-secondary" data-filter=".dev">
+				  	<span class="filter-icon filter-icon-code"></span>
+				  	Development
+				  </button>
+				</div>
 			</div>
 
 			<div class="grid">
@@ -76,7 +84,7 @@
 		  	  	<div class="grid-item-overlay">
 		  	  	  <div class="grid-item-text">
 		  	  	  	<h3 class="txt-white">{{project.title}}</h3>
-		  	  	  	<p class="txt-red">{{project.label}}</p>
+		  	  	  	<p class="txt-red">{{project.label}} <i class="fa fa-arrow-right" aria-hidden="true"></i></p>
 		  	  	  </div>
 		  	  	</div>
 		  	  </div>
@@ -85,6 +93,65 @@
 
 		</section>
 	</div>
+
+	<section class="section-padding bkg-lightgray" id="about">
+		<div class="container">
+			<img src="img/ryne.jpg" alt="Ryne Schillinger" id="img-ryne"></img>
+			<div id="about-text">
+				<h1>About Me</h1>
+				<p>
+					One of my earliest creative assignments was to come up with a name for my childhood pet, a dwarf chameleon. The result? “Changing Colors.”
+				</p>
+				<p>
+					I was the world’s worst art director at age 7 and only slightly better at 19. That’s when I enrolled at the Savannah College of Art and Design, where I learned that the best visual communication says something beyond the obvious. Since then, I’ve helped international brands and tiny startups alike tell the world who they are through a variety of mediums.
+				</p>
+				<p>
+					Every design challenge is unique and the solution isn’t one-size-fits-all. Sometimes it’s being friendly when everyone else is serious. Or being brash when everyone else is cautious. Or just being red when everyone else is blue. I approach every project by asking, “What do these guys stand for, and how can I show that in a fresh and unexpected way?” Because your brand isn’t a chameleon that needs to blend in. It needs to stand out. And I can help you do that.
+				</p>
+				<span>
+					<img src="img/resume.svg" alt="resume" id="icon-resume">
+					<a href="resume/RyneSchillinger_Resume.pdf" target="_blank" class="txt-blue"><p class="txt-bold">Check out my resume</p></a>
+					<i class="fa fa-arrow-right" aria-hidden="true"></i>
+				</span>
+			</div>
+		</div>
+	</section>
+
+	<section class="section-padding bkg-white" id="contact">
+		<div class="container">
+			<h1>Get at me.</h1>
+			<p class="txt-blue">
+				I’m currently available for freelance opportunities. If you'd like to receive a project estimate, schedule a meeting, or discuss who’s the greatest music artist of all time and why it’s Kanye West, drop me a line and I'll holler back with the quickness.
+			</p>
+			<a href="mailto:holla@ryneschillinger.com?Subject=Hey Ryne" target="_top" class="a-button"><button class="btn-red">
+				<i class="fa fa-envelope" aria-hidden="true"></i>
+				holla@ryneschillinger.com
+			</a></button>
+		</div>
+	</section>
+
+	<footer class="bkg-blue">
+		<div class="container">
+			<div class="header-spacer">
+				<h4 class="txt-light">
+					&copy; 2017 Ryne Schillinger
+				</h4>
+				<div id="footer-links">
+					<a href="https://github.com/ryneschillinger"><h4>
+						<i class="fa fa-github" aria-hidden="true"></i>
+						<span class="txt-bold footer-link">Github 
+							<i class="fa fa-arrow-right" aria-hidden="true"></i>
+						</span>
+					</a></h4>
+					<a href="https://www.linkedin.com/in/ryneschillinger/"><h4>
+						<i class="fa fa-linkedin-square" aria-hidden="true"></i>
+						<span class="txt-bold footer-link">LinkedIn 
+							<i class="fa fa-arrow-right" aria-hidden="true"></i>
+						</span>
+					</a></h4>
+				</div>
+			</div>
+	</footer>
 
 </body>
 </html>

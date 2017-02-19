@@ -2,27 +2,68 @@ $(document).ready(function(){
 	// Browser window scroll (in pixels) after which the "back to top" button is shown
 	var offset = 300,
 		// Reduce button opacity after scrolling this much
-		offset_opacity = 1200,
+		offsetOpacity = 1200,
 		// Duration of the top scrolling animation
-		scroll_top_duration = 700,
+		scrollTopDuration = 700,
 		// Grab the "back to top" button
-		$back_to_top = $('.cd-top');
+		backToTop = $('.cd-top'),
+		reducedOpacity = false;
 
 	// Hide or show the "back to top" button
 	$(window).scroll(function(){
-		console.log($(this).scrollTop());
-		( $(this).scrollTop() > offset ) ? $back_to_top.addClass('cd-is-visible') : $back_to_top.removeClass('cd-is-visible cd-fade-out');
-		if( $(this).scrollTop() > offset_opacity ) { 
-			$back_to_top.addClass('cd-fade-out');
+		( $(this).scrollTop() > offset ) ? backToTop.addClass('cd-is-visible') : backToTop.removeClass('cd-is-visible cd-fade-out');
+
+		// Reduce button opacity if user scrolls down for a bit
+		if ( $(this).scrollTop() > offsetOpacity && reducedOpacity == false) { 
+			backToTop.addClass('cd-fade-out');
+			reducedOpacity = true;
+		}
+	});
+
+	// Make button visible again if user starts scrolling up
+	$(window).bind('mousewheel', function(event) {
+		if (event.originalEvent.wheelDelta >= 100) {
+			backToTop.removeClass('cd-fade-out');
+		}
+		// Reduce opacity if they start scrolling again
+		else {
+			reducedOpacity = false;
 		}
 	});
 
 	// Smooth scroll to top
-	$back_to_top.on('click', function(event){
+	backToTop.on('click', function(event){
 		event.preventDefault();
 		$('body,html').animate({
 			scrollTop: 0 ,
-		 	}, scroll_top_duration
+		 	}, scrollTopDuration
+		);
+	});
+
+
+	// Smooth scrolls on nav link clicks
+
+	$('.work-link').on('click', function(event){
+		event.preventDefault();
+		$('body,html').animate({
+			scrollTop: $('#work-gallery').offset().top ,
+		 	}, scrollTopDuration
+		);
+	});
+
+	$('.about-link').on('click', function(event){
+		event.preventDefault();
+		$('body,html').animate({
+			scrollTop: $('#about').offset().top ,
+		 	}, scrollTopDuration
+		);
+	});
+
+	$('.contact-link').on('click', function(event){
+		event.preventDefault();
+		$('body,html').animate({
+			scrollTop: $('#contact').offset().top ,
+		 	}, scrollTopDuration
 		);
 	});
 
