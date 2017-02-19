@@ -625,6 +625,10 @@ footer .header-spacer {
 
 @media all and (max-width: 700px) {
 
+	h1 {
+		font-size: 35px;
+	}
+
 	h3 {
 		font-size: 18px;
 	}
@@ -711,8 +715,8 @@ footer .header-spacer {
 	}
 
 	#img-ryne {
-		margin-bottom: 30px;
-		max-width: 52%;
+		margin-bottom: 25px;
+		max-width: 46%;
 	}
 
 	#about-text {
