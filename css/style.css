@@ -213,23 +213,34 @@ button i {
 	right: 1.75%; bottom: 0;
 	flex-direction: column;
 	align-items: center;
-	padding: 12px 14px 6px 14px;
+	padding: 11px 14px 6px 14px;
 	border-radius: 3em 3em 0 0;
 	background-color: #143660;
 	z-index: 99;
 	display: flex;
 	opacity: 0;
 	cursor: pointer;
+	border-top: 2px solid #C1D4D7;
+	border-left: 2px solid #C1D4D7;
+	border-right: 2px solid #C1D4D7;
 }
 
-.cd-top i, .cd-top p {
+.cd-top p {
 	font-size: 13px;
-	font-weight: 700;
+	font-weight: 500;
 	letter-spacing: .05em;
 	color: #c1d4d7;
 	margin: 0;
 	transition-property: color;
 	transition-duration: 300ms;
+}
+
+.cd-top i {
+	font-size: 14px;
+	-webkit-text-fill-color: #C1D4D7;
+	-webkit-text-stroke-width: .5px;
+	-webkit-text-stroke-color: #143660;
+	margin-bottom: 1px;
 }
 
 .cd-top:hover > i, .cd-top:hover > p {
@@ -303,9 +314,20 @@ section#hero-text .container {
 }
 
 section#hero-text h3 {
-	width: 69%;
+	width: 70%;
 	font-weight: 300;
 	text-align: center;
+}
+
+section#hero-text a {
+	box-shadow: inset 0 -2px 0 #E3EDEF, inset 0 -5px 0 #FD4F3F;
+	transition-property: box-shadow, color;
+	transition-duration: 300ms;
+}
+
+section#hero-text a:hover {
+	color: #e2281b;
+	box-shadow: inset 0 -2px 0 #E3EDEF, inset 0 -5px 0 #e2281b;
 }
 
 
@@ -481,7 +503,10 @@ section#hero-text h3 {
 	width: 450px;
 	max-width: 35%;
 	height: auto;
-	border-radius: 1.5em;
+	border-radius: 10%;
+	border-left: 1px solid #c1cbd0;
+	border-right: 1px solid #c1cbd0;
+	box-shadow: 0 4px 0 #c1cbd0;
 }
 
 #img-ryne:after {
@@ -492,6 +517,8 @@ section#hero-text h3 {
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
+	transition-property: color;
+	transition-duration: 300ms;
 }
 
 #about-text a {
@@ -501,12 +528,10 @@ section#hero-text h3 {
 #about-text i {
 	transform: scale(.7);
 	margin: 18px 0 0 5px;
-	transition-property: color;
-	transition-duration: 300ms;
 }
 
 #about-text span:hover, #about-text a:hover {
-	color: #667481;
+	color: #FD4F3F;
 }
 
 #icon-resume {
@@ -574,6 +599,12 @@ footer .header-spacer {
 /* MEDIA QUERIES s*/
 
 @media all and (max-width: 950px) {
+
+	section#hero-text h3 {
+		width: 75%;
+		text-align: left;
+	}
+
 	.grid-item,
 	.grid-sizer {
 	  width: 33.333%;
@@ -638,7 +669,7 @@ footer .header-spacer {
 	}
 
 	#work-gallery {
-		padding-bottom: 75px;
+		padding-bottom: 80px;
 	}
 
 	#nav-links {
@@ -711,7 +742,7 @@ footer .header-spacer {
 		flex-direction: column;
 		align-items: center;
 		justify-content: flex-start;
-		transform: translateY(-70px);
+		transform: translateY(-75px);
 	}
 
 	#img-ryne {

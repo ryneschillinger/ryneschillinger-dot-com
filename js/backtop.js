@@ -4,7 +4,7 @@ $(document).ready(function(){
 		// Reduce button opacity after scrolling this much
 		offsetOpacity = 1200,
 		// Duration of the top scrolling animation
-		scrollTopDuration = 700,
+		scrollTopDuration = 600,
 		// Grab the "back to top" button
 		backToTop = $('.cd-top'),
 		reducedOpacity = false;
