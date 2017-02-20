@@ -220,16 +220,16 @@ button i {
 	display: flex;
 	opacity: 0;
 	cursor: pointer;
-	border-top: 2px solid #C1D4D7;
-	border-left: 2px solid #C1D4D7;
-	border-right: 2px solid #C1D4D7;
+	border-top: 2px solid #E3EDEF;
+	border-left: 2px solid #E3EDEF;
+	border-right: 2px solid #E3EDEF;
 }
 
 .cd-top p {
 	font-size: 13px;
 	font-weight: 500;
 	letter-spacing: .05em;
-	color: #c1d4d7;
+	color: #E3EDEF;
 	margin: 0;
 	transition-property: color;
 	transition-duration: 300ms;
@@ -237,7 +237,7 @@ button i {
 
 .cd-top i {
 	font-size: 14px;
-	-webkit-text-fill-color: #C1D4D7;
+	-webkit-text-fill-color: #E3EDEF;
 	-webkit-text-stroke-width: .5px;
 	-webkit-text-stroke-color: #143660;
 	margin-bottom: 1px;
