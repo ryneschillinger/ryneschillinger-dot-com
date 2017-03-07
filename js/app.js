@@ -10,6 +10,7 @@ angular.module('App', [])
 			tileThumb: './img/tile_grcc.jpg',
 			tileSize: 'grid-item grid-item-2x',
 			tags: "brand print",
+			href: "grcc"
 		},
 		{
 			title: 'Netflix',

@@ -16,11 +16,13 @@
 	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
 	<script src="https://use.fontawesome.com/0b8790a92d.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/projects.css">
+
 </head>
 <body ng-controller="AppController">
 
-	<div class="container">
-		<nav>
+	<nav>
+		<div class="container">
 			<a href="#"><img src="img/rs_avy.svg" id="nav-logo" alt="ryne logo"></a>
 			<div id="nav-links">
 				<a class="work-link">Work</a>
@@ -28,8 +30,8 @@
 				<a href="resume/RyneSchillinger_Resume.pdf" target="_blank">Resume</a>
 				<a class="contact-link">Contact</a>
 			</div>
-		</nav>
-	</div>
+		</div>
+	</nav>
 
 	<section id="hero-text">
 		<div class="container">
@@ -80,7 +82,7 @@
 
 			<div class="grid">
 			  <div class="grid-sizer"></div>
-		    <a href="#" ng-repeat="project in projects track by $index">
+		    <a href="./work/{{project.href}}.html" ng-repeat="project in projects track by $index">
 		  	  <div class="{{project.tileSize}} {{project.tags}}" data-category="{{project.tags}}" style="background: url({{project.tileThumb}}); background-size: 100%;">
 		  	  	<div class="grid-item-overlay">
 		  	  	  <div class="grid-item-text">
@@ -134,9 +136,12 @@
 	<footer class="bkg-blue">
 		<div class="container">
 			<div class="header-spacer">
-				<h4 class="txt-light">
-					&copy; 2017 Ryne Schillinger
-				</h4>
+				<div class="header-spacer">
+					<img src="img/rs_avy.svg" id="footer-logo" alt="ryne logo">
+					<h4 class="txt-light">
+						&copy; 2017 Ryne Schillinger
+					</h4>
+				</div>
 				<div id="footer-links">
 					<a href="https://github.com/ryneschillinger"><h4>
 						<i class="fa fa-github" aria-hidden="true"></i>
