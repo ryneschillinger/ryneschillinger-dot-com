@@ -3,7 +3,7 @@
 body {
 	background-color: #EEF4F5;
 	font-family: 'Poppins', sans-serif;
-	color: #2B3B4F;
+	color: #191e62;
 	display: flex;
 	flex-direction: column;
 	margin: 0;
@@ -23,7 +23,7 @@ h2 {
 }
 
 h3 {
-	font-size: 20px;
+	font-size: 23px;
 	line-height: 1.4;
 }
 
@@ -159,7 +159,7 @@ button i {
 
 .btn-secondary {
 	background-color: #d6e6e9;
-	color: #2B3B4F;
+	color: #191e62;
 }
 
 .btn-secondary:hover {
@@ -178,7 +178,7 @@ button i {
 }
 
 .txt-blue {
-	color: #2B3B4F;
+	color: #191e62;
 }
 
 .txt-red {
@@ -201,7 +201,7 @@ button i {
 }
 
 .bkg-blue {
-	background-color: #143660;
+	background-color: #191e62;
 }
 
 
@@ -215,21 +215,21 @@ button i {
 	align-items: center;
 	padding: 11px 14px 6px 14px;
 	border-radius: 3em 3em 0 0;
-	background-color: #143660;
+	background-color: #191e62;
 	z-index: 99;
 	display: flex;
 	opacity: 0;
 	cursor: pointer;
-	border-top: 2px solid #C1D4D7;
-	border-left: 2px solid #C1D4D7;
-	border-right: 2px solid #C1D4D7;
+	border-top: 2px solid #E3EDEF;
+	border-left: 2px solid #E3EDEF;
+	border-right: 2px solid #E3EDEF;
 }
 
 .cd-top p {
 	font-size: 13px;
 	font-weight: 500;
 	letter-spacing: .05em;
-	color: #c1d4d7;
+	color: #E3EDEF;
 	margin: 0;
 	transition-property: color;
 	transition-duration: 300ms;
@@ -237,7 +237,7 @@ button i {
 
 .cd-top i {
 	font-size: 14px;
-	-webkit-text-fill-color: #C1D4D7;
+	-webkit-text-fill-color: #E3EDEF;
 	-webkit-text-stroke-width: .5px;
 	-webkit-text-stroke-color: #143660;
 	margin-bottom: 1px;
@@ -268,11 +268,14 @@ button i {
 /*** NAVIGATION BAR ***/
 
 nav {
+	background-color: #E3EDEF;
+	padding: 10px 0;
+}
+
+nav .container {
 	display: flex;
+	justify-content: space-between;
 	align-items: center;
-	z-index: 1;
-	position: absolute;
-	top: 10px;
 }
 
 nav #nav-logo {
@@ -285,10 +288,10 @@ nav #nav-links {
 }
 
 nav #nav-links a {
-	color: #2B3B4F;
+	color: #191e62;
 	font-size: 14px;
 	font-weight: 500;
-	margin-left: 32px;
+	margin-left: 40px;
 }
 
 nav #nav-links a:hover {
@@ -302,7 +305,9 @@ nav #nav-links a:hover {
 
 section#hero-text {
 	background-color: #E3EDEF;
-	margin-top: -10px;
+	height: 55vh;
+	display: flex;
+	align-items: flex-start;
 }
 
 section#hero-text .container {
@@ -310,7 +315,7 @@ section#hero-text .container {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 66vh;
+	height: 80%;
 }
 
 section#hero-text h3 {
@@ -346,7 +351,7 @@ section#hero-text a:hover {
 
 #filters-header i {
 	display: none;
-	-webkit-text-fill-color: #2B3B4F;
+	-webkit-text-fill-color: #191e62;
 	-webkit-text-stroke-width: 1px;
 	-webkit-text-stroke-color: #EEF4F5;
 	cursor: pointer;
@@ -438,12 +443,12 @@ section#hero-text a:hover {
 
 .grid-item-overlay {
 	position: absolute;
-	top: 0; left: 0;
+	bottom: 0; left: 0;
 	height: 100%;
 	width: 101%;
 	opacity: 0;
 	transition: 300ms ease;
-	background-color: #0e3669;
+	background-color: #191e62;
 }
 
 .grid-item-text {
@@ -563,6 +568,11 @@ footer .header-spacer {
 	color: #d2dfe1;
 }
 
+#footer-logo {
+	width: 30px;
+	margin-right: 12px;
+}
+
 .footer-link, #footer-links .fa-arrow-right {
 	color: #d2dfe1;
 	transition-property: color;
@@ -598,10 +608,10 @@ footer .header-spacer {
 
 /* MEDIA QUERIES s*/
 
-@media all and (max-width: 950px) {
+@media only screen and (max-width: 950px) {
 
 	section#hero-text h3 {
-		width: 75%;
+		width: 80%;
 		text-align: left;
 	}
 
@@ -616,7 +626,7 @@ footer .header-spacer {
 
 }
 
-@media all and (max-width: 910px) {
+@media only screen and (max-width: 910px) {
 
 	.filters-button-group {
 		display: flex;
@@ -654,7 +664,7 @@ footer .header-spacer {
 
 }
 
-@media all and (max-width: 700px) {
+@media only screen and (max-width: 700px) {
 
 	h1 {
 		font-size: 35px;
@@ -674,11 +684,6 @@ footer .header-spacer {
 
 	#nav-links {
 		display: none;
-	}
-
-	section#hero-text .container {
-		padding-top: 60px;
-		height: 60vh;
 	}
 
 	section#hero-text h3 {
@@ -763,7 +768,7 @@ footer .header-spacer {
 
 }
 
-@media all and (max-width: 600px) {
+@media only screen and (max-width: 600px) {
 
 	section#contact .container {
 		width: 100%;
@@ -776,7 +781,7 @@ footer .header-spacer {
 
 }
 
-@media all and (max-width: 450px) {
+@media only screen and (max-width: 450px) {
 	.grid-item,
 	.grid-sizer {
 	  width: 100%;
@@ -789,10 +794,21 @@ footer .header-spacer {
 
 	.grid-item-overlay {
 		opacity: .93;
+		height: 23%;
 	}
 
 	.grid-item-text {
-	  top: 50%;
+	  top: 41%;
+	  text-align: left;
+	  margin-left: -6px;
+	}
+
+	.grid-item-text p {
+	  margin-top: -15px;
+	}
+
+	.grid-item:hover .grid-item-text {
+		top: 42%;
 	}
 
 }
